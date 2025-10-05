@@ -43,19 +43,9 @@ namespace neu {
             return false;
         }
 
-        return true;
-    }
-
-    /// <summary>
-    /// Retrieves the dimensions of the texture in pixels.
-    /// Queries SDL for the texture's width and height.
-    /// </summary>
-    /// <returns>A vec2 containing the texture's width (x) and height (y) in pixels</returns>
-    vec2 Texture::GetSize() {
         // Query the texture for its dimensions
-        float w, h;
-        SDL_GetTextureSize(m_texture, &w, &h);
+        SDL_GetTextureSize(m_texture, &m_size.x, &m_size.y);
 
-        return vec2{ w, h };
-    }
+        return true;
+    } 
 }
