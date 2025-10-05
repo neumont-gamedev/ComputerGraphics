@@ -399,3 +399,7 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Include ThirdParty lib folders and files
+!source/thirdparty/sdl3/lib
+!source/thirdparty/**/*.lib
